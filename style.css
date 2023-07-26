@@ -1,0 +1,175 @@
+html {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/4096px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg);
+    background-repeat:no-repeat;
+    background-size: contain cover;
+}
+
+
+body {
+    font-family: 'Barlow', sans-serif;
+
+    /* Gets rid of space in front of header and footer*/
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* ------------ Header ------------ */
+
+header{
+    font-size: 2rem;
+
+    background: rgba(255, 255, 255, 75%);
+
+    width: 100%; 
+    overflow: auto;
+    
+    
+
+    display: block;
+}
+
+.header{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#local-date {
+    float: left;
+}
+
+/* ------------ Settings/Pomodoro Timer/Footer ------------ */
+
+main p,
+button {
+    font-size: 20px;
+}
+
+.pop-up {
+    width: 500px;
+    height: 250px;
+
+    border-radius: 33px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 75%); /* it is rgba instead of hex to make it opaque */
+
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menu-options, 
+#timer-control {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-options p,
+.control-text {
+    display: inline-block;
+}
+
+.tab-text, 
+.control-text, 
+#footer-text {
+    text-align: center;
+}
+
+
+
+/* ------------ Pomodoro Timer ------------ */
+
+/* ------------ #timer-options creates the tabs on menu ------------ */
+
+/*This gives each timer option a height bottom border and transparent white background*/
+#timer-options-left,
+#timer-options-center,
+#timer-options-right {
+    height: 61px;
+
+    border-bottom: 1px solid #000;
+    background: rgba(255, 255, 255, 0.00);
+}
+
+/* This creates the dividers between the timer options*/
+#timer-options-left,
+#timer-options-center {
+    border-right: 1px solid #000;
+}
+
+#timer-options-left,
+#timer-options-right {
+    width: 167px;
+}
+
+#timer-options-center {
+    width: 166px;  
+}
+
+#timer {
+    text-align: center;
+    display: block;
+}
+
+/* ------------ #timer-control creates controls for timer ------------ */
+
+#timercontrol-left,
+#timercontrol-right {
+    width: 140px;
+    height: 50px;
+
+    border-radius: 35px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.00); 
+}
+
+#timercontrol-right p,
+#timercontrol-left p {
+    position: relative;
+
+    top: -8px;
+}
+
+/* centers timer and the controls */
+#timer-center {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 500px;
+
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ------------ Buttons ------------ */
+
+button:focus,
+button:hover,
+#timer-control button:focus,
+#timer-control button:hover{
+    border: 3px solid #000;
+}
+
+
+/* ------------ Footer ------------ */
+
+footer {
+    background: rgba(255, 255, 255, 75%);
+
+    width: 100vw; 
+    padding: 0;
+    overflow: auto;
+    margin: 0;
+
+    display: block;
+
+    position: fixed;
+    bottom: 0px;
+}
