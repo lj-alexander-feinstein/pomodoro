@@ -17,11 +17,13 @@ stop.addEventListener("click", reset)
 
 
 function pomodoroTimer() {
+    clearInterval(interval);
     document.getElementById("timer").innerText = "25:00";
     minutes = 25;
 };
 
 function shortBreakTimer() {
+    clearInterval(interval);
     document.getElementById("timer").innerText = "5:00";
     //time in seconds
     minutes = 5;

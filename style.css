@@ -1,8 +1,12 @@
 
 body {
+    /* 
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/4096px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg);
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    */
+
+    background-color: #b3cee5;
 
     font-family: 'Barlow', sans-serif;
 
@@ -19,40 +23,15 @@ h1 {
     font-size: 50px;
 }
 
-/* ------------ Header ------------ */
+/* ------------ Pomodoro Timer/Footer ------------ */
 
-header{
-    font-size: 2rem;
-
-    background: rgba(255, 255, 255, 75%);
-
-    width: 100%; 
-    overflow: auto;
-    
-    
-
-    display: block;
-}
-
-.header{
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-#local-date {
-    float: left;
-}
-
-/* ------------ Settings/Pomodoro Timer/Footer ------------ */
-
-main p,
 button {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
-.pop-up {
-    width: 500px;
-    height: 250px;
+#pomodoro-timer {
+    width: 66vw;
+    height: 40vh;
 
     border-radius: 33px;
     border: 1px solid #000;
@@ -91,28 +70,34 @@ button {
 /* ------------ #timer-options creates the tabs on menu ------------ */
 
 /*This gives each timer option a height bottom border and transparent white background*/
-#timer-options-left,
-#timer-options-center,
-#timer-options-right {
-    height: 61px;
+#short-break,
+#pomodoro,
+#long-break {
+    height: 10vh;
 
     border-bottom: 1px solid #000;
     background: rgba(255, 255, 255, 0.00);
+
 }
 
 /* This creates the dividers between the timer options*/
-#timer-options-left,
-#timer-options-center {
+#short-break,
+#pomodoro {
     border-right: 1px solid #000;
 }
 
-#timer-options-left,
-#timer-options-right {
-    width: 167px;
+#short-break,
+#long-break,
+#pomodoro{
+    width: 22vw;
 }
 
-#timer-options-center {
-    width: 166px;  
+#short-break {
+    border-top-left-radius: 33px;
+}
+
+#long-break {
+    border-top-right-radius: 33px;
 }
 
 #timer {
@@ -159,6 +144,14 @@ button:hover,
     border: 3px solid #000;
 }
 
+button {
+    border: 1px solid #000;
+}
+
+.control-text{
+    padding: 10px;
+    border-radius: 35px;
+}
 
 /* ------------ Footer ------------ */
 
@@ -174,4 +167,20 @@ footer {
 
     position: fixed;
     bottom: 0px;
+}
+
+/* ------------ Media Queries ------------ */
+
+@media screen and (max-width: 650px) {
+    body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    }
+    
+    button{
+      font-size: 1rem;  
+    }
 }
